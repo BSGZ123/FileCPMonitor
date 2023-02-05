@@ -7,6 +7,21 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-
+        <DockPanel><!--停靠布局，让菜单栏位于窗口顶部-->
+            <Menu DockPanel.Dock="Top"  Height="22" VerticalAlignment="Top">
+                <MenuItem Header="File">
+                    <!--菜单项为MenuItem，文字使用属性 Header-->
+                    <MenuItem Name="menuOpen" Header="Open" Click="menuOpen_Click"></MenuItem>
+                    <MenuItem Header="Save"></MenuItem>
+                    <MenuItem Header="Delete"></MenuItem>
+                </MenuItem>
+                <MenuItem Header="Edit"></MenuItem>
+                <MenuItem Header="View"></MenuItem>
+                <MenuItem Header="About"></MenuItem>
+            </Menu>
+        </DockPanel>
+        <ListBox Height="380" Width="780" >
+            
+        </ListBox>
     </Grid>
 </Window>

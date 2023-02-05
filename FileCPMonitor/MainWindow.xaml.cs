@@ -24,5 +24,10 @@ namespace FileCPMonitor
         {
             InitializeComponent();
         }
+
+        public void menuOpen_Click(object sender, RoutedEventArgs e)
+        {
+            return;
+        }
     }
 }
