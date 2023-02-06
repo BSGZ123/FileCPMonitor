@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FileCPMonitor"
         mc:Ignorable="d"
-        Title="MainWindow" Height="330" Width="500">
+        Title="FileCPMonitor" Height="330" Width="500">
 
     <Window.Resources>
         <Style TargetType="{x:Type GridViewColumnHeader}">
@@ -23,8 +23,8 @@
                     <MenuItem Header="Delete"></MenuItem>
                 </MenuItem>
                 <MenuItem Header="Edit"></MenuItem>
-                <MenuItem Header="View"></MenuItem>
-                <MenuItem Header="About"></MenuItem>
+                <MenuItem Header="Settings"></MenuItem>
+                <MenuItem Header="Help"></MenuItem>
             </Menu>
         </DockPanel>
         <ListView Height="220" Width="450" Name="FilePathInfo">
