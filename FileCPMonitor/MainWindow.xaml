@@ -6,6 +6,13 @@
         xmlns:local="clr-namespace:FileCPMonitor"
         mc:Ignorable="d"
         Title="MainWindow" Height="330" Width="500">
+
+    <Window.Resources>
+        <Style TargetType="{x:Type GridViewColumnHeader}">
+            <Setter Property="HorizontalContentAlignment" Value="Center" />
+            <Setter Property="Background" Value="	#F5F5F5"/>
+        </Style>
+    </Window.Resources>
     <Grid>
         <DockPanel><!--停靠布局，让菜单栏位于窗口顶部-->
             <Menu DockPanel.Dock="Top"  Height="22" VerticalAlignment="Top">
@@ -21,7 +28,15 @@
             </Menu>
         </DockPanel>
         <ListView Height="220" Width="450" Name="FilePathInfo">
-            
+            <!--主界面UI设计:文件监控信息ListView-->
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Monitoring Path" Width="125" DisplayMemberBinding="{Binding MPath}" />
+                    <GridViewColumn Header="Backup Path" Width="125" DisplayMemberBinding="{Binding BPath}" />
+                    <GridViewColumn Header="Polling times" Width="100" DisplayMemberBinding="{Binding PTimes}" />
+                    <GridViewColumn Header="Status" Width="100" DisplayMemberBinding="{Binding Status}" />
+                </GridView>
+            </ListView.View>
         </ListView>
     </Grid>
 </Window>
