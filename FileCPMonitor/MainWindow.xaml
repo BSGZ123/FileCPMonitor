@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FileCPMonitor"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="330" Width="500">
     <Grid>
         <DockPanel><!--停靠布局，让菜单栏位于窗口顶部-->
             <Menu DockPanel.Dock="Top"  Height="22" VerticalAlignment="Top">
@@ -20,8 +20,8 @@
                 <MenuItem Header="About"></MenuItem>
             </Menu>
         </DockPanel>
-        <ListBox Height="380" Width="780" >
+        <ListView Height="220" Width="450" Name="FilePathInfo">
             
-        </ListBox>
+        </ListView>
     </Grid>
 </Window>
