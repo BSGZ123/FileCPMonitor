@@ -18,13 +18,29 @@
             <Menu DockPanel.Dock="Top"  Height="22" VerticalAlignment="Top">
                 <MenuItem Header="File">
                     <!--菜单项为MenuItem，文字使用属性 Header-->
-                    <MenuItem Name="menuOpen" Header="Open" Click="menuOpen_Click"></MenuItem>
-                    <MenuItem Header="Save"></MenuItem>
-                    <MenuItem Header="Delete"></MenuItem>
+                    <MenuItem Name="Add" Header="Open" Click="menuOpen_Click"></MenuItem>
+                    <MenuItem Header="Edit"></MenuItem>
+                    <MenuItem Header="Settings">
+                        <MenuItem.Icon>
+                            <Image>
+                                <Image.Source>
+                                    <BitmapImage UriSource="..\Img\Settings.png"></BitmapImage>
+                                </Image.Source>
+                            </Image>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem Header="Exit"></MenuItem>
                 </MenuItem>
-                <MenuItem Header="Edit"></MenuItem>
-                <MenuItem Header="Settings"></MenuItem>
-                <MenuItem Header="Help"></MenuItem>
+                <MenuItem Header="Report">
+                    <MenuItem Header="Quick Report"></MenuItem>
+                </MenuItem>
+                <MenuItem Header="Tools">
+                    <MenuItem Header="Import Configuration"></MenuItem>
+                </MenuItem>
+                <MenuItem Header="Help">
+                    <MenuItem Header="Report Issue"></MenuItem>
+                    <MenuItem Header="ABout"></MenuItem>
+                </MenuItem>
             </Menu>
         </DockPanel>
         <ListView Height="220" Width="450" Name="FilePathInfo">
