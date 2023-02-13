@@ -8,10 +8,26 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Img\Add.png" />
+    <None Remove="Img\Edit.png" />
+    <None Remove="Img\Exit.png" />
+    <None Remove="Img\Report.png" />
     <None Remove="Img\Settings.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Img\Add.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Img\Edit.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Img\Exit.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Img\Report.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Img\Settings.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
