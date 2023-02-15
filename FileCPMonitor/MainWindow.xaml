@@ -87,7 +87,7 @@
                             </Image>
                         </MenuItem.Icon>
                     </MenuItem>
-                    <MenuItem IsCheckable="True"  Click="MenuitemDone" Header="Stay in the background">
+                    <MenuItem  Click="MenuitemDone" Header="Stay in the background">
                         <MenuItem.Icon>
                             <Image  x:Name="imgVisible">
                                 <Image.Source>
