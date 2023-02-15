@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FileCPMonitor"
         mc:Ignorable="d"
+        ResizeMode="CanMinimize"
         WindowStartupLocation="CenterScreen"
         Title="FileCPMonitor" Height="330" Width="500">
 
@@ -120,5 +121,7 @@
                 </GridView>
             </ListView.View>
         </ListView>
+        
+        
     </Grid>
 </Window>
