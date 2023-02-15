@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         ResizeMode="CanMinimize"
         WindowStartupLocation="CenterScreen"
-        Title="FileCPMonitor" Height="330" Width="500">
+        Title="FileCPMonitor" Height="340" Width="500">
 
     <Window.Resources>
         <Style TargetType="{x:Type GridViewColumnHeader}">
@@ -20,7 +20,7 @@
             <Menu DockPanel.Dock="Top"  Height="22" VerticalAlignment="Top">
                 <MenuItem Header="File">
                     <!--菜单项为MenuItem，文字使用属性 Header-->
-                    <MenuItem Name="Add" Header="Add" Click="menuOpen_Click">
+                    <MenuItem Name="Add" Header="Add" Click="MenuOpen_Click">
                         <MenuItem.Icon>
                             <Image>
                                 <Image.Source>
@@ -87,6 +87,22 @@
                             </Image>
                         </MenuItem.Icon>
                     </MenuItem>
+                    <MenuItem IsCheckable="True"  Click="MenuitemDone" Header="Stay in the background">
+                        <MenuItem.Icon>
+                            <Image  x:Name="imgVisible">
+                                <Image.Source>
+                                    <BitmapImage UriSource="\Img\Done.png"/>
+                                </Image.Source>
+                            </Image>
+                        </MenuItem.Icon>
+                        <!--<ControlTemplate>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsChecked" Value="True">
+                                    <Setter Property="Visibility" TargetName="doneImg" Value="Visible"/>
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>-->
+                    </MenuItem>
                 </MenuItem>
                 <MenuItem Header="Help">
                     <MenuItem Header="Report Issue">
@@ -121,7 +137,9 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        
-        
+
+        <StackPanel Margin="2,5,2,5" Width="480" Height="30" VerticalAlignment="Bottom">
+            <CheckBox HorizontalAlignment="Right" Margin="10,6,23,0">Follow system start</CheckBox>
+        </StackPanel>
     </Grid>
 </Window>

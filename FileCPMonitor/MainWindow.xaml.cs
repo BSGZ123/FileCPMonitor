@@ -25,9 +25,23 @@ namespace FileCPMonitor
             InitializeComponent();
         }
 
-        public void menuOpen_Click(object sender, RoutedEventArgs e)
+        public void MenuOpen_Click(object sender, RoutedEventArgs e)
         {
             return;
+        }
+
+        //后台驻留逻辑 默认是后台驻留的
+        public void MenuitemDone(object sender, RoutedEventArgs e)
+        {
+            if (imgVisible.Visibility == Visibility.Visible)
+            {
+                imgVisible.Visibility = Visibility.Hidden;
+            }
+            else
+            {
+                imgVisible.Visibility = Visibility.Visible;
+            }
+            
         }
     }
 }

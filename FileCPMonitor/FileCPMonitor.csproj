@@ -10,6 +10,7 @@
   <ItemGroup>
     <None Remove="Img\About.png" />
     <None Remove="Img\Add.png" />
+    <None Remove="Img\Done.png" />
     <None Remove="Img\Edit.png" />
     <None Remove="Img\Exit.png" />
     <None Remove="Img\Export.png" />
@@ -24,6 +25,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Img\Add.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Img\Done.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Img\Edit.png">
