@@ -1,17 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+﻿using System.Windows;
+using System.Windows.Forms;
 
 namespace FileCPMonitor
 {
@@ -20,10 +8,24 @@ namespace FileCPMonitor
     /// </summary>
     public partial class MainWindow : Window
     {
+        private NotifyIcon notifyIcon = null;
+
         public MainWindow()
         {
             InitializeComponent();
         }
+
+        private void InitialTray()
+        {
+            //隐藏主窗体
+            this.Visibility = Visibility.Hidden;
+
+            notifyIcon = new NotifyIcon();
+            notifyIcon.BalloonTipText = "FileCPMonitor running ...";
+            notifyIcon.Text = "FileCPMonitor";
+            notifyIcon.Icon = new System.Drawing.Icon("");
+        }
+
 
         public void MenuOpen_Click(object sender, RoutedEventArgs e)
         {
