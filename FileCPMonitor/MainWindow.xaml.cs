@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System;
+using System.Windows;
 using System.Windows.Forms;
 
 namespace FileCPMonitor
@@ -24,8 +25,18 @@ namespace FileCPMonitor
             notifyIcon.BalloonTipText = "FileCPMonitor running ...";
             notifyIcon.Text = "FileCPMonitor";
             notifyIcon.Icon = new System.Drawing.Icon("");
+            notifyIcon.Visible = true;
+            notifyIcon.ShowBalloonTip(1);
+            notifyIcon.MouseClick += new System.Windows.Forms.MouseEventHandler(notifyIcon_MouseClick);
+
         }
 
+
+        //鼠标单击
+        private void notifyIcon_MouseClick(object? sender, MouseEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
 
         public void MenuOpen_Click(object sender, RoutedEventArgs e)
         {
