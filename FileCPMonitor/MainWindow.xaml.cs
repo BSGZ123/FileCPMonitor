@@ -35,7 +35,28 @@ namespace FileCPMonitor
         //鼠标单击
         private void notifyIcon_MouseClick(object? sender, MouseEventArgs e)
         {
-            throw new NotImplementedException();
+            if (e.Button == MouseButtons.Left)
+            {
+                if (this.Visibility == Visibility.Visible)
+                {
+                    this.Visibility = Visibility.Hidden;
+                }
+                else
+                {
+                    this.Visibility = Visibility.Visible;
+                    this.Activate();
+                }
+            }
+        }
+
+
+        //窗口发生移动时会触发
+        private void SysTray_StateChanged(object sender, EventArgs e)
+        {
+            if (this.WindowState == WindowState.Minimized)
+            {
+                this.Visibility = Visibility.Hidden;
+            }
         }
 
         public void MenuOpen_Click(object sender, RoutedEventArgs e)
@@ -55,6 +76,19 @@ namespace FileCPMonitor
                 imgVisible.Visibility = Visibility.Visible;
             }
             
+        }
+
+        //选择退出时询问
+        private void exit_Click(object sender, EventArgs e)
+        {
+            if (System.Windows.MessageBox.Show("sure to exit?",
+                                               "application",
+                                                MessageBoxButton.YesNo,
+                                                MessageBoxImage.Question,
+                                                MessageBoxResult.No) == MessageBoxResult.Yes)
+            {
+                System.Windows.Application.Current.Shutdown();
+            }
         }
     }
 }
