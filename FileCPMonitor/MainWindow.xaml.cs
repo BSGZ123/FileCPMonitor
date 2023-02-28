@@ -9,11 +9,11 @@ namespace FileCPMonitor
     /// </summary>
     public partial class MainWindow : Window
     {
-        private NotifyIcon notifyIcon = null;
 
         public MainWindow()
         {
             InitializeComponent();
+            InitialTray();
         }
 
         private void InitialTray()
@@ -21,13 +21,27 @@ namespace FileCPMonitor
             //隐藏主窗体
             this.Visibility = Visibility.Hidden;
 
-            notifyIcon = new NotifyIcon();
-            notifyIcon.BalloonTipText = "FileCPMonitor running ...";
-            notifyIcon.Text = "FileCPMonitor";
-            notifyIcon.Icon = new System.Drawing.Icon("");
-            notifyIcon.Visible = true;
-            notifyIcon.ShowBalloonTip(1);
-            notifyIcon.MouseClick += new System.Windows.Forms.MouseEventHandler(notifyIcon_MouseClick);
+            MenuStrip menuStrip = new MenuStrip();
+
+            //托盘菜单项
+            ToolStripMenuItem item3 = new ToolStripMenuItem("Report");
+            ToolStripMenuItem item1 = new ToolStripMenuItem("Setting");
+            ToolStripMenuItem item2 = new ToolStripMenuItem("Exit");
+
+            //Setting菜单子项
+            ToolStripMenuItem itemS1 = new ToolStripMenuItem("Start");
+            ToolStripMenuItem itemS2 = new ToolStripMenuItem("Stop");
+            ToolStripMenuItem itemS3 = new ToolStripMenuItem("Clean");
+
+            menuStrip.Items.Add(item1);
+            menuStrip.Items.Add(item2);
+            menuStrip.Items.Add(item3);
+
+            item1.DropDownItems.Add(itemS1);
+            item1.DropDownItems.Add(itemS2);
+            item1.DropDownItems.Add(itemS3);
+
+
 
         }
 
