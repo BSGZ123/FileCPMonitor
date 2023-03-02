@@ -6,6 +6,7 @@
              StartupUri="MainWindow.xaml">
     <Application.Resources>
         <tb:TaskbarIcon x:Key="Taskbar"
+                        ToolTipText="FileCPMonitor"
                         IconSource="Taskbar.ico">
 
         </tb:TaskbarIcon>

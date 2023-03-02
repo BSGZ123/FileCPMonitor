@@ -19,6 +19,7 @@
     <None Remove="Img\Issue.png" />
     <None Remove="Img\Report.png" />
     <None Remove="Img\Settings.png" />
+    <None Remove="Taskbar.ico" />
   </ItemGroup>
 
   <ItemGroup>
@@ -54,6 +55,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Img\Settings.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Taskbar.ico">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>
