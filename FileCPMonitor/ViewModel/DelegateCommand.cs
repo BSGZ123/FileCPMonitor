@@ -9,16 +9,23 @@ namespace FileCPMonitor.ViewModel
 {
     public class DelegateCommand : ICommand
     {
-        public event EventHandler? CanExecuteChanged;
+        public Action CommandAction { get; set; }
+        public Func<bool> CanExecuteFunc { get; set; }
 
         public bool CanExecute(object? parameter)
         {
-            throw new NotImplementedException();
+            return CanExecuteFunc == null || CanExecuteFunc();
         }
 
         public void Execute(object? parameter)
         {
-            throw new NotImplementedException();
+            CommandAction();
+        }
+
+        public event EventHandler CanExecuteChanged
+        {
+            add { CommandManager.RequerySuggested += value; }
+            remove { CommandManager.RequerySuggested -= value; }
         }
     }
 }
